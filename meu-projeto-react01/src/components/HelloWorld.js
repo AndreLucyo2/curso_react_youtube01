@@ -6,12 +6,7 @@ function HelloWorld() {
             <Frase/>
             <h1>Meu primeiro compomente.</h1>
             <Frase/>
-            <Frase/>
-            <Frase/>
-            <Frase/>
-            <Frase/>
-            <Frase/>
-            
+            <Frase/>            
         </div>
     );
 }
