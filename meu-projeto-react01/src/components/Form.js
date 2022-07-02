@@ -1,4 +1,9 @@
+import { useState } from 'react'
+
 function Form() {
+
+    //usando o hook para pegar os dados da tela:
+    const [name, setName] = useState();
 
     //https://youtu.be/uqmRi4JXk3s?list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO&t=505
     //Evento: 
@@ -6,19 +11,37 @@ function Form() {
         //para poder pegar o evendo de retorno do compoente:
         //Permance na pagian e nao envia... permanece no front
         event.preventDefault();
-        alert('Cadastraou usuário!')
+
+        //captura o que informado na tela:
+        alert('Cadastraou usuário! ' + name)
+
         console.log('Cadastrado com sucesso!')
     }
-
 
     //Retorno o evento ---------------------------------------
     return (
         <div>
-            <h1>Meu cadastro</h1>
+            <h2>Meu cadastro:</h2>
             <form onSubmit={cadastrarUsuario}>
                 <div>
                     <div>
-                        <input type="text" placeholder="Digite o seu nome" />
+                        <label htmlFor="name">Nome:</label>
+                        <input type="text"
+                            id="name"
+                            name="name"
+                            data-cy="inputName"
+                            placeholder="Digite o seu nome"
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="password">Senha:</label>
+                        <input type="password"
+                            id="password"
+                            name="password"
+                            data-cy="inputPassword"
+                            placeholder="Digite a sua senha"
+                        />
                     </div>
                     <div>
                         <input type="submit" value="Cadastrar" />
