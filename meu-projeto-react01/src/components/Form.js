@@ -4,6 +4,7 @@ function Form() {
 
     //usando o hook para pegar os dados da tela:
     const [name, setName] = useState();
+    const [pasword, setPasword] = useState();
 
     //https://youtu.be/uqmRi4JXk3s?list=PLnDvRpP8BneyVA0SZ2okm-QBojomniQVO&t=505
     //Evento: 
@@ -13,9 +14,8 @@ function Form() {
         event.preventDefault();
 
         //captura o que informado na tela:
-        alert('Cadastraou usuário! ' + name)
-
-        console.log('Cadastrado com sucesso!')
+        alert(`Cadastrou usuário! \nNome:  ${name}\nSenha:  ${pasword}`)
+        console.log(`Cadastrado com sucesso! \nNome:  ${name}\nSenha:  ${pasword}`)
     }
 
     //Retorno o evento ---------------------------------------
@@ -32,7 +32,7 @@ function Form() {
                             data-cy="inputName"
                             placeholder="Digite o seu nome"
                             onChange={(e) => setName(e.target.value)}
-                        />
+                            />
                     </div>
                     <div>
                         <label htmlFor="password">Senha:</label>
@@ -41,6 +41,7 @@ function Form() {
                             name="password"
                             data-cy="inputPassword"
                             placeholder="Digite a sua senha"
+                            onChange={(e) => setPasword(e.target.value)}
                         />
                     </div>
                     <div>
