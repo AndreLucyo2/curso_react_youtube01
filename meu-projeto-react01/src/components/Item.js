@@ -1,4 +1,6 @@
-function Item({marca, ano_lancamento}) {
+import PropTypes from 'prop-types'
+
+function Item({ marca, ano_lancamento }) {
 
     return (
         <>
@@ -7,5 +9,13 @@ function Item({marca, ano_lancamento}) {
     )
 
 }
+
+//Validação da propriedade:
+Item.propTypes = {
+    marca: PropTypes.string.isRequired,
+    ano_lancamento: PropTypes.number
+}
+
+
 
 export default Item
