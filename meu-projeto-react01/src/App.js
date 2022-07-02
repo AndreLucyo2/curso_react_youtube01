@@ -6,8 +6,8 @@ function App() {
   return (
     <div>
       <h1>Testando eventos</h1>
-      <Evento/>
-      <Form/>
+      <Evento />
+      <Form />
 
     </div>
   )
