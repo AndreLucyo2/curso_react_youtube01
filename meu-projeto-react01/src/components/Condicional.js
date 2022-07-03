@@ -9,10 +9,7 @@ function Condicional() {
 
     function enviarEmail(e) {
         e.preventDefault();
-
         setUserEmail(email);
-
-        alert(`Testtando ${userEmail}`)
     }
 
     return (
@@ -29,7 +26,13 @@ function Condicional() {
                     Enviar e-mail
                 </button>
             </form>
-            {userEmail}
+            {userEmail && (
+                <div>
+                    <p>
+                        O e-mail do usuario é: {userEmail}
+                    </p>
+                </div>
+            )}
 
         </div>
 
