@@ -3,11 +3,19 @@ body {
   background-color: azure;
 }
 
-h1{
+h1 {
   color: brown;
 }
 
-p{
+h3 {
+  color: rgb(50, 40, 187);
+}
+
+h4 {
+  color: rgb(221, 25, 68);
+}
+
+p {
   color: aqua;
   padding: 10px;
   background-color: black;

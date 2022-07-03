@@ -7,7 +7,7 @@ function ListaOutra({ itens }) {
                     <p key={index}> {item}</p>
                 )
             ) : (
-                <h6>Sem intens para mostrar!</h6>
+                <h4>Sem intens para mostrar!</h4>
             )}
 
         </>

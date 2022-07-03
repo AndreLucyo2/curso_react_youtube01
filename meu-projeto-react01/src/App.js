@@ -1,18 +1,17 @@
 import './App.css';
-import Condicional from './components/Condicional';
 import ListaOutra from './components/ListaOutra';
 
 function App() {
 
-const meusItens =['React', 'Vue', 'Angular']
+  const meusItens = ['React', 'Vue', 'Angular']
 
   return (
     <div className="App">
       <h1>Renderezação de listas</h1>
       <h3>Lista de coisas boas:</h3>
-      <ListaOutra itens={meusItens}/>
+      <ListaOutra itens={meusItens} />
       <h3>Outra Lista de coisas boas:</h3>
-      <ListaOutra itens={[]}/>
+      <ListaOutra itens={[]} />
     </div>
   )
 }
