@@ -2,7 +2,7 @@ function Footer()
 {
     return(
         <footer>
-            RODAPÉ!!!!
+            <h3>RODAPÉ!!!!</h3>
         </footer>
     )
 }
