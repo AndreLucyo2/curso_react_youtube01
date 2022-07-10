@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import Container from '../layout/Container'
+import Loading from '../layout/Loading'
 
 import Message from "../layout/Message"
 
@@ -14,6 +15,7 @@ import styles from './Projects.module.css'
 function Projects() {
 
   const [projects, setProjects] = useState([])
+  //useState para remover o loading
   const [removeLoading, setRemoveLoading] = useState(false)
   const [projectMessage, setProjectMessage] = useState('')
 
@@ -40,10 +42,9 @@ function Projects() {
           .then((data) => {
             console.log(data)
             setProjects(data)
+            //remove o loading assim que terminar de carregar os projetos:
             setRemoveLoading(true)
-          }),
-      100,
-    )
+          }),300) //timer para poder ver o loader
   }, [])
 
 
@@ -80,6 +81,11 @@ function Projects() {
               handleRemove={removeProject}
             />
           ))}
+
+        {!removeLoading && <Loading />}
+        {removeLoading && projects.length === 0 && (
+          <p>Não há projetos cadastrados!</p>
+        )}
       </Container>
 
     </div>
