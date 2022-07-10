@@ -20,7 +20,7 @@ function Message({ type, msg }) {
     //inicia o timer:
     const timer = setTimeout(() => {
       setVisible(false);
-    }, 3000)
+    }, 4000)
 
     //Finaliza i timer e retorna...
     return () => clearTimeout(timer);

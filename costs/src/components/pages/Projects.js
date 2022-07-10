@@ -3,10 +3,11 @@ import { useLocation } from 'react-router-dom'
 
 function Projects() {
 
-  //valida se recebeu alguma mensagem
+  //valida se recebeu alguma mensagem através do hook/state
   const location = useLocation()
   let message = ''
   if (location.state) {
+    //Se tiver mensagem atribui na variavel
     message = location.state.message
   }
 
