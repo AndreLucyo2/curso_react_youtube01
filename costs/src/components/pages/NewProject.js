@@ -7,7 +7,7 @@ import styles from './NewProject.module.css'
 function NewProject() {
 
   //permite fazer redirects, redireciona para outras paginas
-  const history = useNavigate();
+  const navegate = useNavigate();
 
   function createPost(project) {
 
@@ -29,7 +29,7 @@ function NewProject() {
       .then((data) => {
         console.log(data);
         //faz o redirect:
-        history('/projects', { message: 'Projeto criado com sucesso!' })
+        navegate('/projects',{state:{ message: 'Projeto criado com sucesso!'}})
       })
   }
 
